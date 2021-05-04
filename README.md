@@ -2,6 +2,7 @@
 ## IPCA - Academic year 2021/2022
 
 Course leader: Eva Oliveira
+
 Students: Romano Keser & Laurenz Gebauer
 
 noname* app will cover some basic functionalities for student management.
