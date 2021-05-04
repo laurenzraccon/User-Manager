@@ -2,7 +2,6 @@
 ## IPCA - Academic year 2021/2022
 
 Course leader: Eva Oliveira
-
 Students: Romano Keser & Laurenz Gebauer
 
 noname* app will cover some basic functionalities for student management.
@@ -20,5 +19,6 @@ noname* app will cover some basic functionalities for student management.
 
 noname* app uses 
 
-- [AngularJS] - HTML enhanced for web apps!
-- [node.js] - evented I/O for the backend
+- [AngularJS](https://angularjs.org/) - HTML enhanced for web apps!
+- [node.js](https://nodejs.org/) - evented I/O for the backend
+
