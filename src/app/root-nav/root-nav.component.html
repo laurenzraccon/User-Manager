@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/app-dashboard-class">Dashboard</a>
+      <a mat-list-item routerLink="/app-add-class">Create Class</a>
+      <a mat-list-item routerLink="/app-edit-class">Edit Class</a>
+      <a mat-list-item routerLink="/app-delete-class">Delete Class</a>
+      <a mat-list-item routerLink="/app-upload-cv-class">Upload CV</a>
+      <a mat-list-item routerLink="/app-create-evaluation-class">Create Evaluation</a>
+      <a mat-list-item routerLink="/app-edit-evaluation-class">Edit Evaluation</a>
+      <a mat-list-item routerLink="/app-delete-evaluation-class">Delete Evaluation</a>
+      <a mat-list-item routerLink="/app-insert-grade-class">Insert Grade</a>
+      <a mat-list-item routerLink="/app-edit-grade-class">Edit Grade</a>
+      <a mat-list-item routerLink="/app-delete-grade-class">Delete Grade</a>
+      <a mat-list-item routerLink="/app-create-note-class">Create Note</a>
+      <a mat-list-item routerLink="/app-edit-note-class">Edit Note</a>
+      <a mat-list-item routerLink="/app-delete-note-class">Delete Note</a>
+    </mat-nav-list>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+
+      <span>Moodle MWT</span>
+   
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+
+      
+
+      <!-- Search form -->
+      <form class="form-inline waves-light" mdbWavesEffect>
+        
+       <div class="parent">
+
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      </div>
+    </form>
+    
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
