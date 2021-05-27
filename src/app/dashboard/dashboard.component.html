@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<main>
+<app-add-class
+        (postCreated)="onPostAdded($event)"></app-add-class>
+     <app-class-list [posts]="storedPosts" ></app-class-list>
+</main>

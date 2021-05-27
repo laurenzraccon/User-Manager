@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+
+
+  storedPosts = [];
+  onPostAdded(post) {
+  this.storedPosts.push(post);
+  }
+
   constructor() { }
 
   ngOnInit() {

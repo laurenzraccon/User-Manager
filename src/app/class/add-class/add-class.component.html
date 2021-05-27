@@ -1,9 +1,8 @@
 <p>Add Class:</p>
 
 <hr>
-
-
-<form class="example-form">
+<mat-card>
+<form class="example-form" (submit)="onAddPost(postForm)" #postForm="ngForm" >
     <mat-form-field class="example-full-width">
       <mat-label>OWNER</mat-label>
       <input matInput disabled value="Admin">
@@ -12,11 +11,14 @@
     <table class="example-full-width" cellspacing="0"><tr>
       <td><mat-form-field class="example-full-width">
         <mat-label>Class name</mat-label>
-        <input matInput>
+        <!-- Enter Class Name with min length of 3-->
+        <input matInput  name="title" placeholder="title" [(ngModel)]="enteredTitle" ngModel required  minlength="3" #title="ngModel">
+        <!-- Error Handeling-->
+        <mat-error *ngIf="title.invalid">Please enter a valid post title</mat-error>
       </mat-form-field></td>
       <td><mat-form-field class="example-full-width">
         <mat-label>Short Name</mat-label>
-        <input matInput>
+        <input matInput  name="content" placeholder="shortName" [(ngModel)]="enteredContent" ngModel required> 
       </mat-form-field></td>
     </tr></table>
   
@@ -39,5 +41,13 @@
      
       </mat-form-field></td>
     </tr></table>
-    <button>Save Class</button>
+    <!-- Sent Data to Dashboard-->
+    <button mat-raised-button
+    type="submit"
+    color="accent">Save Post</button>
+    
+    <!-- Sent Data to Node.js-->
+    <hr>
+    <input type="submit" value="Submit">
   </form>
+</mat-card>

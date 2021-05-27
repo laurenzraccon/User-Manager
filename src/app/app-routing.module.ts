@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { AddClassComponent } from './add-class/add-class.component';
-import { DeleteClassComponent } from './delete-class/delete-class.component';
-import { EditClassComponent } from './edit-class/edit-class.component';
+import { AddClassComponent } from './class/add-class/add-class.component';
+import { DeleteClassComponent } from './class/delete-class/delete-class.component';
+import { EditClassComponent } from './class/edit-class/edit-class.component';
 import { CreateEvaluationComponent } from './create-evaluation/create-evaluation.component';
 import { CreateNoteComponent } from './create-note/create-note.component';
 import { DeleteEvaluationComponent } from './delete-evaluation/delete-evaluation.component';
@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'app-edit-grade-class' , component: EditGradeComponent},
   { path: 'app-edit-evaluation-class' , component: EditEvaluationComponent},
   { path: 'app-edit-note-class' , component: EditNoteComponent},
-  { path: 'app-edit-class-class' , component: EditClassComponent},
+  { path: 'app-edit-class' , component: EditClassComponent},
   { path: 'app-insert-grade-class' , component: InsertGradeComponent},
   { path: 'app-upload-cv-class' , component: UploadCvComponent},
   { path: 'app-dashboard-class' , component: DashboardComponent}

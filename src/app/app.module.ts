@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RootNavComponent } from './root-nav/root-nav.component';
@@ -11,9 +11,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
-import { AddClassComponent } from './add-class/add-class.component';
-import { DeleteClassComponent } from './delete-class/delete-class.component';
-import { EditClassComponent } from './edit-class/edit-class.component';
+import { AddClassComponent } from './class/add-class/add-class.component';
+import { DeleteClassComponent } from './class/delete-class/delete-class.component';
+import { EditClassComponent } from './class/edit-class/edit-class.component';
 import { UploadCvComponent } from './upload-cv/upload-cv.component';
 import { CreateEvaluationComponent } from './create-evaluation/create-evaluation.component';
 import { EditEvaluationComponent } from './edit-evaluation/edit-evaluation.component';
@@ -28,7 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
 import { MatInputModule } from "@angular/material/input";
-
+import { HttpClientModule } from '@angular/common/http';
+import { ClassListComponent } from './class/class-list/class-list.component';
 
 //Declarations --> Only Components
 @NgModule({
@@ -48,7 +49,8 @@ import { MatInputModule } from "@angular/material/input";
     CreateNoteComponent,
     EditNoteComponent,
     DeleteNoteComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClassListComponent
   ],
 //Imports: --> Only Module
   imports: [
@@ -64,7 +66,9 @@ import { MatInputModule } from "@angular/material/input";
     FormsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
